@@ -6,15 +6,27 @@ html, body{
   
 }
 .container {
-  background: $background;
+  background: url(../img/background2.gif);
+//  background: $background;
   width: 90% !important;
   
   font-family: Molengo, Sans-serif;
 }
 
+
+#universe{
+  display:flex;
+  justify-content: center;
+}
+
 #title {
 
 }
+.carousel-caption {
+    top: 0;
+    bottom: auto;
+}
+
 
 #title {
   color: $white;
@@ -24,66 +36,64 @@ html, body{
   font-size: 3.5vw;
   letter-spacing: 0.9em;
 } 
+  
+// .card {
+//   color: #fff;
+//     box-shadow: 0 0 10px black;
 
-#layers {
-   //radial gradient would add depth, browser doesn't render nicely though
-  //background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+//   //border-color: #726EBF; 
+// border-radius: 1px;
+// }
+// .card-body{
+//   border-radius: 1px;
+
+//     box-shadow: 0 0 5px black;
+// }
+
+// .card-header {
+//   color: #fff;
+//   background-color: #FFF001;
+//  // border-color: #726EBF;
+//     // border-radius: 100px;
+//     //   border-radius: 50px;
+
+//   }
+
+//   .cardColor{
+//   color: #fff;
+//   background-color: green;
+//  border-color: #726EBF;
+// // border-radius: 1;
+//
+ //}
+
+ h4, h5{
+  color: #FC4C08;
+  text-shadow: 10px 10px 10px #FFC76C;
+ }
+p{
+  color: white;
 }
 
-.layer {
-  margin-left: 15%;
-  width: 30%;
-  height: 50%;
-  position: absolute;
-  opacity: 0;
-  animation-name: zoom;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  
-  &.layer-2 {
-    animation-delay: 1s;
-  }
-  
-  &.layer-3 {
-    animation-delay: 2s;
-  }
-  
-  &.layer-4 {
-    animation-delay: 3s;
-  }
-  
-  &.layer-5 {
-    animation-delay: 4s;
-  }
+.accordion {
+  max-width: 90%;
+  margin: 50px auto;
+
+  //border-radius: 10px;
+}
+ 
+
+ 
+.accordion .card-header {
+  border-bottom-color: #EDEFF0;
+  background: transparent;
 }
 
-.star {
-  width: 11px;
-  height: 11px;
-  display: inline-block;
-  position: absolute;
-  fill: #ffffff;
+ 
+.accordion .btn-link:hover,
+.accordion .btn-link:focus {
+  text-decoration: none;
   
-  &:nth-child(3n+3) {  
-    fill: #FEC777;
-  }
-  
-  &:nth-child(5n+5) {  
-    fill: #498FB3;
-  }
 }
+ 
 
-@keyframes zoom {
-  0% {
-    transform: scale(0.1);
-    opacity: 0;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}

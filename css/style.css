@@ -1,7 +1,15 @@
 .container {
-  background: #253D47;
+  background: url(../img/background2.gif);
   width: 90% !important;
   font-family: Molengo, Sans-serif; }
+
+#universe {
+  display: flex;
+  justify-content: center; }
+
+.carousel-caption {
+  top: 0;
+  bottom: auto; }
 
 #title {
   color: #FFFFFF;
@@ -11,44 +19,23 @@
   font-size: 3.5vw;
   letter-spacing: 0.9em; }
 
-.layer {
-  margin-left: 15%;
-  width: 30%;
-  height: 50%;
-  position: absolute;
-  opacity: 0;
-  animation-name: zoom;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite; }
-  .layer.layer-2 {
-    animation-delay: 1s; }
-  .layer.layer-3 {
-    animation-delay: 2s; }
-  .layer.layer-4 {
-    animation-delay: 3s; }
-  .layer.layer-5 {
-    animation-delay: 4s; }
+h4, h5 {
+  color: #FC4C08;
+  text-shadow: 10px 10px 10px #FFC76C; }
 
-.star {
-  width: 11px;
-  height: 11px;
-  display: inline-block;
-  position: absolute;
-  fill: #ffffff; }
-  .star:nth-child(3n+3) {
-    fill: #FEC777; }
-  .star:nth-child(5n+5) {
-    fill: #498FB3; }
+p {
+  color: white; }
 
-@keyframes zoom {
-  0% {
-    transform: scale(0.1);
-    opacity: 0; }
-  90% {
-    opacity: 1; }
-  100% {
-    transform: scale(2);
-    opacity: 0; } }
+.accordion {
+  max-width: 90%;
+  margin: 50px auto; }
+
+.accordion .card-header {
+  border-bottom-color: #EDEFF0;
+  background: transparent; }
+
+.accordion .btn-link:hover,
+.accordion .btn-link:focus {
+  text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */
