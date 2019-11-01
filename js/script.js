@@ -208,6 +208,14 @@ var planetArr5 = [planet1_2, location2_2, event2_2, restaurant2_2_0];
 var universe2Arr = [planetArr3, planetArr4, planetArr5];
 //------------------------------------------Start with createing my HTML----------------------------------------------
 $(document).ready(function () {
+    //Create Carosel for the 3 Universes
+    function creatCarosel1() {
+        $(".cont0").append("<div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\">\n                <div class=\"carousel-inner\">\n                    <div class=\"carousel-item active\">\n                        <img class=\"d-block w-100\" src=\"./img/universe_logo.jpg\" alt=\"First slide\">\n                        <div class=\"carousel-caption d-none d-md-block\">\n                            <h1>The Hitchhiker\u2019s Guide to the Galaxy</h1>\n                            <p>\u201CDon't panic and don't forget your towel\u201D</p>\n                        </div>\n                    </div>\n                    <div class=\"carousel-item\">\n                        <img class=\"d-block w-100\" src=\"./img/marvin.jpg\" alt=\"Second slide\">\n                        <div class=\"carousel-caption d-none d-md-block\">\n                            <h1>Magrathea</h1>\n                            <p>\u201CMagrathea itself soon became the richest planet of all time\u201D</p>\n                        </div>\n                    </div>\n                    <div class=\"carousel-item\">\n                        <img class=\"d-block w-100\" src=\"./img/universe_quote.png\" alt=\"Third slide\">\n                        <div class=\"carousel-caption d-none d-md-block\">\n                            <h1>Magrathea</h1>\n                            <p>\u201CMagrathea itself soon became the richest planet of all time\u201D</p>\n                        </div>\n                    </div>\n                </div>\n                <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">\n                    <!--made a button insted of a-->\n                    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n                    <span class=\"sr-only\">Previous</span>\n                </a>\n                <a class=\"carousel-control-next\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">\n                    <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n                    <span class=\"sr-only\">Next</span>\n                </a>\n            </div>");
+    }
+    ;
+    function creatCarosel2() {
+        $(".cont0").append("<div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\">\n                <div class=\"carousel-inner\">\n                    <div class=\"carousel-item active\">\n                        <img class=\"d-block w-100 \" src=\"./img/starTrek_logo2.jpg\" alt=\"First slide\">\n                        <div class=\"carousel-caption d-none d-md-block\">\n                            <h1>Star Trek</h1>\n                            <p>\u201CLive long and prosper\u201D</p>\n                        </div>\n                    </div>\n                    <div class=\"carousel-item\">\n                        <img class=\"d-block w-100\" src=\"./img/starTrek_logo1.png\" alt=\"Second slide\">\n                        <div class=\"carousel-caption d-none d-md-block\">\n                            <h1>Star Trek</h1>\n                            <p>\u201CRevenge is a dish best served cold\u201D</p>\n                        </div>\n                    </div>\n                    <div class=\"carousel-item\">\n                        <img class=\"d-block w-100\" src=\"./img/starTrek_logo.gif\" alt=\"Third slide\">\n                        <div class=\"carousel-caption d-none d-md-block\">\n                            <h1>Star Trek</h1>\n                            <p>\u201CEnergy\u201D</p>\n                        </div>\n                    </div>\n                </div>\n                <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">\n                    <!--made a button insted of a-->\n                    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n                    <span class=\"sr-only\">Previous</span>\n                </a>\n                <a class=\"carousel-control-next\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">\n                    <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n                    <span class=\"sr-only\">Next</span>\n                </a>\n            </div>");
+    }
     function creatPlanets(arr) {
         $(".cont1").append("<div class=\"accordion-inner\"><div class=\"accordion\" id=\"accordionExample\"></div></div>");
         for (var i = 0; i < arr.length; i++) {
@@ -229,20 +237,25 @@ $(document).ready(function () {
         }
         ;
     }
-    creatPlanets(universe1Arr);
-    creatLocations(universe1Arr);
     //------------------------------------------Some Function for my HTML ------------------------------------------------
     //change the universe
     $("input[id='option1']").change(function () {
         $(".cont1").html("");
+        $(".cont0").html("");
+        creatCarosel1();
         creatPlanets(universe1Arr);
         creatLocations(universe1Arr);
     });
     $("input[id='option2']").change(function () {
         $(".cont1").html("");
+        $(".cont0").html("");
+        creatCarosel2();
         creatPlanets(universe2Arr);
         creatLocations(universe2Arr);
     });
+    creatCarosel1();
+    creatPlanets(universe1Arr);
+    creatLocations(universe1Arr);
     //stop auto Carosel
     $('.carousel').carousel({
         interval: false
