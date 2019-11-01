@@ -66,7 +66,13 @@ html, body{
 // // border-radius: 1;
 //
  //}
-
+.carousel{
+  width: 90%;
+  margin: 0 5% 0 5%;
+  img{
+    height :500px;
+  }
+} 
  h4, h5{
   color: #FC4C08;
   text-shadow: 10px 10px 10px #FFC76C;
