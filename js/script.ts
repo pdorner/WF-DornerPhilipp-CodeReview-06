@@ -251,6 +251,7 @@ class Events extends DoTo{
 }
 
 //------------------------------------------Classes for my HTML Space Site--------------------------------------------
+//Username comes here
 let user = new User("Captian")
 
 //first Universe with all classes
@@ -345,9 +346,9 @@ let restaurant2_2_0 = new Restaurant (universe1.universeName, "RomuR0", "Romulan
 	"Romulan Ale Distillery Bar", "Krocton Segment 4112, Romulanstreet 82", "./img/romu_restaurant.jpg", "https://memory-alpha.fandom.com/wiki/Romulus", "+889 6546 0444");
 
 
-let planetArr3 = [planet1_0, restaurant2_0, location2_0, event2_0_0, event2_0_1];
-let planetArr4 = [planet1_1, restaurant2_1_0, restaurant2_1_1, location2_1, event2_1_0, event2_1_1];
-let planetArr5 = [planet1_2, restaurant2_2_0, location2_2, event2_2];
+let planetArr3 = [planet1_0, location2_0, restaurant2_0, event2_0_0, event2_0_1];
+let planetArr4 = [planet1_1, location2_1, restaurant2_1_0, restaurant2_1_1, event2_1_0, event2_1_1];
+let planetArr5 = [planet1_2, location2_2, restaurant2_2_0, event2_2];
 
 let universe1Arr = [planetArr3, planetArr4, planetArr5];
 //The Expanse ----------under construction

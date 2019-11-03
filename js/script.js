@@ -177,6 +177,7 @@ var Events = /** @class */ (function (_super) {
     return Events;
 }(DoTo));
 //------------------------------------------Classes for my HTML Space Site--------------------------------------------
+//Username comes here
 var user = new User("Captian");
 //first Universe with all classes
 //Hitchiker data ----------
@@ -223,9 +224,9 @@ var planet1_2 = new Planet(universe1.universeName, "Romulus", "Romulus was the i
 var location2_2 = new Locations(universe1.universeName, "RomuL0", "Get a Tour throug the Romulan Imperial Senat", "Romulan Imperial Senat", "Krocton Segment 1045 , Mainstreet 1", "./img/romu_location.jpg", "https://memory-beta.fandom.com/wiki/Imperial_Senate_of_the_Romulan_Star_Empire");
 var event2_2 = new Events(universe1.universeName, "RomuE0", "Movienight: The Romulan Way", "Romulan Gand Cinema", "Krocton Segment 2315, Romstreet 11", "./img/romu_event.jpg", "https://memory-alpha.fandom.com/wiki/The_Romulan_Way", "+081 5588 1676", "06.11.2285", 8);
 var restaurant2_2_0 = new Restaurant(universe1.universeName, "RomuR0", "Romulan ale was a highly intoxicating alcoholic beverage of Romulan origin with a characteristic blue color (ranging from a pale sky blue to a dark midnight blue).", "Romulan Ale Distillery Bar", "Krocton Segment 4112, Romulanstreet 82", "./img/romu_restaurant.jpg", "https://memory-alpha.fandom.com/wiki/Romulus", "+889 6546 0444");
-var planetArr3 = [planet1_0, restaurant2_0, location2_0, event2_0_0, event2_0_1];
-var planetArr4 = [planet1_1, restaurant2_1_0, restaurant2_1_1, location2_1, event2_1_0, event2_1_1];
-var planetArr5 = [planet1_2, restaurant2_2_0, location2_2, event2_2];
+var planetArr3 = [planet1_0, location2_0, restaurant2_0, event2_0_0, event2_0_1];
+var planetArr4 = [planet1_1, location2_1, restaurant2_1_0, restaurant2_1_1, event2_1_0, event2_1_1];
+var planetArr5 = [planet1_2, location2_2, restaurant2_2_0, event2_2];
 var universe1Arr = [planetArr3, planetArr4, planetArr5];
 //The Expanse ----------under construction
 var universe2 = new Universe("The Expanse");
