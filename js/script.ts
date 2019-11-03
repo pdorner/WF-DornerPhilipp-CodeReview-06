@@ -384,7 +384,8 @@ function createHTML(){
                     <div class="navbar-nav">
                         <a class="nav-item nav-link" id = "home" href="#">Home</a>
                         <a class="nav-item nav-link" id ="all" href="#">Space</a>
-                   
+                        <a class="nav-item nav-link" id ="newLocation" href="#">Add Locations</a>
+
                     </div>
                 </div>
             </nav>
@@ -414,6 +415,7 @@ function createHTML(){
 
 }
 
+//------------------------------------------HTML Elemtents that Change with going through the Page----------------------------------------------
 
 //Create Buttons for home and Space
 function threeButtons(){
@@ -432,6 +434,7 @@ function threeButtons(){
 }
 
 //Create Carosel for the 3 Universes
+//Create Carosel for Hitchhiker’s
 function creatCarosel1(){
             $(".cont0").append(`<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
@@ -477,11 +480,9 @@ function creatCarosel1(){
 //Create Carosel for Star Trek
 function creatCarosel2(){
             $(".cont0").append(`<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  					<div class="carousel-inner">
-    					<div class="carousel-item active">
-                        <div class="carousel-item">
-
-                        <img class="d-block w-100 src="./img/starTrek_logo1.png" alt="Second slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+                        <img class="d-block w-100" src="./img/starTrek_logo1.png" alt="First slide">
 
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Star Trek</h3>
@@ -496,14 +497,14 @@ function creatCarosel2(){
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 " src="./img/kling_planet.jpg" alt="First slide">
+                        <img class="d-block w-100 " src="./img/kling_planet.jpg" alt="Second slide">
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Qo'noS</h3>
                             <p>“Revenge is a dish best served cold”</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100 " src="./img/romu_planet.jpg" alt="First slide">
+                        <img class="d-block w-100 " src="./img/romu_planet.jpg" alt="Fourth slide">
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Romulus</h3>
                             <p>“Romulus was the inhabited second planet of the Romulan system in Sector Z-6”</p>
@@ -589,7 +590,7 @@ $(".collapse").on('click', '#home', function () {
 }
 //------------------------------------------Some Function for my HTML ------------------------------------------------
 
-//change the universe
+//change the universe first Hitchhiker’s Second Star Trek
 function xy(){
 $("input[id='option1']").change(function(){
 	$(".cont1").html("");
@@ -608,7 +609,7 @@ $("input[id='option2']").change(function(){
 	creatLocations(universe1Arr);
 });
 }
-// Check in to my Travelblock Questions
+// Check into my Travelblock Questions
 $("input[id='no']").change(function(){
 	$(".typewriter").append(`<h1 id="welcome" sysle="color: white, text-center">Oh :( So than</h1>
 		           <h1 id="showMe">"Live long and prosper"</h1>
@@ -656,6 +657,7 @@ $("input[id='yes1']").change(function(){
 
 });
 }
+//show content
 function start2(){
 $("input[id='yes3']").change(function(){
 		console.log("Hallo");
