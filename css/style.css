@@ -16,7 +16,7 @@
   text-transform: uppercase;
   text-align: center;
   vertical-align: middle;
-  font-size: 3.5vw;
+  font-size: 6.5vw;
   letter-spacing: 0.9em; }
 
 .carousel {
@@ -25,7 +25,26 @@
   .carousel img {
     height: 500px; }
 
-h4, h5 {
+h1 {
+  font-size: 2.5vw; }
+
+h2 {
+  font-size: 4.5vw; }
+
+h3 {
+  font-size: 3.5vw; }
+
+.carousel-caption h3 {
+  color: white;
+  font-size: 2vw; }
+
+h2, h3 {
+  color: yellow;
+  text-shadow: 10px 10px 10px yellow;
+  text-align: center; }
+
+h4,
+h5 {
   color: #FC4C08;
   text-shadow: 10px 10px 10px #FFC76C; }
 
@@ -43,5 +62,73 @@ p {
 .accordion .btn-link:hover,
 .accordion .btn-link:focus {
   text-decoration: none; }
+
+.panel {
+  background: transparent;
+  border-bottom-color: #EDEFF0; }
+
+.panel .plan {
+  width: 40%; }
+
+#welcome {
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation: typing 6s steps(40, end), blink-caret 8s step-end infinite; }
+
+#showMe {
+  color: white;
+  text-align: center;
+  animation: cssAnimation 0s 5s forwards;
+  visibility: hidden; }
+
+#showMe1 {
+  width: 100%;
+  color: white;
+  position: center;
+  text-align: center;
+  animation: cssAnimation 0s 6s forwards;
+  visibility: hidden; }
+
+#showMe2 {
+  color: white;
+  width: 100%;
+  text-align: center;
+  position: center;
+  animation: cssAnimation 0s 8s forwards;
+  visibility: hidden; }
+
+#nameInput {
+  width: 100%;
+  color: black; }
+
+.hi {
+  height: 100em; }
+
+@keyframes cssAnimation {
+  to {
+    visibility: visible; } }
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent; } }
+@media (max-width: 700px) {
+  img {
+    width: 400px; } }
 
 /*# sourceMappingURL=style.css.map */

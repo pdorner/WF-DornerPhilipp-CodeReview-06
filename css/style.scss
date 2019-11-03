@@ -2,26 +2,25 @@ $background: #253D47;
 $white: #FFFFFF;
 $shade: rgba(25, 41, 48, 0.1);
 
-html, body{
-  
-}
+html,
+body {}
+
 .container {
-  background: url(../img/background2.gif);
-//  background: $background;
-  width: 90% !important;
-  
-  font-family: Molengo, Sans-serif;
+    background: url(../img/background2.gif);
+    //  background: $background;
+    width: 90% !important;
+
+    font-family: Molengo, Sans-serif;
 }
 
 
-#universe{
-  display:flex;
-  justify-content: center;
+#universe {
+    display: flex;
+    justify-content: center;
 }
 
-#title {
+#title {}
 
-}
 .carousel-caption {
     top: 0;
     bottom: auto;
@@ -29,77 +28,159 @@ html, body{
 
 
 #title {
-  color: $white;
-  text-transform: uppercase;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 3.5vw;
-  letter-spacing: 0.9em;
-} 
-  
-// .card {
-//   color: #fff;
-//     box-shadow: 0 0 10px black;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 6.5vw;
+    letter-spacing: 0.9em;
+}
 
-//   //border-color: #726EBF; 
-// border-radius: 1px;
-// }
-// .card-body{
-//   border-radius: 1px;
 
-//     box-shadow: 0 0 5px black;
-// }
+.carousel {
+    width: 90%;
+    margin: 0 5% 0 5%;
 
-// .card-header {
-//   color: #fff;
-//   background-color: #FFF001;
-//  // border-color: #726EBF;
-//     // border-radius: 100px;
-//     //   border-radius: 50px;
+    img {
+        height: 500px;
+    }
+}
 
-//   }
+h1{
+  font-size: 2.5vw;
+}
 
-//   .cardColor{
-//   color: #fff;
-//   background-color: green;
-//  border-color: #726EBF;
-// // border-radius: 1;
-//
- //}
-.carousel{
-  width: 90%;
-  margin: 0 5% 0 5%;
-  img{
-    height :500px;
-  }
-} 
- h4, h5{
-  color: #FC4C08;
-  text-shadow: 10px 10px 10px #FFC76C;
- }
-p{
-  color: white;
+h2{
+    font-size: 4.5vw;
+
+}
+h3{
+    font-size: 3.5vw;
+
+}
+.carousel-caption h3{color: white;
+  font-size:2vw}
+h2, h3{
+
+    color: yellow;
+    text-shadow: 10px 10px 10px yellow;
+    text-align: center;
+}
+
+
+
+
+h4,
+h5 {
+    color: #FC4C08;
+    text-shadow: 10px 10px 10px #FFC76C;
+}
+
+p {
+    color: white;
 }
 
 .accordion {
-  max-width: 90%;
-  margin: 50px auto;
+    max-width: 90%;
+    margin: 50px auto;
 
-  //border-radius: 10px;
+    //border-radius: 10px;
 }
- 
 
- 
+
+
 .accordion .card-header {
-  border-bottom-color: #EDEFF0;
-  background: transparent;
+    border-bottom-color: #EDEFF0;
+    background: transparent;
 }
 
- 
+
 .accordion .btn-link:hover,
 .accordion .btn-link:focus {
-  text-decoration: none;
-  
+    text-decoration: none;
+
 }
+
+//all Locations and Items setting
+.panel {
+    background: transparent;
+    border-bottom-color: #EDEFF0;
+
+}
+
+.panel .plan {
+    width: 40%;
+}
+//Typwritereffect for start of the Page
+#welcome {
+  color: white;
+  text-align: center;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+
+  animation: 
+    typing 6s steps(40, end),
+    blink-caret 8s step-end infinite;
+}
+
+#showMe {
+  color: white;
+  text-align: center;
+  animation: cssAnimation 0s 5s forwards;
+  visibility: hidden;
+}
+#showMe1 {
+  width: 100%;
+  color: white;
+  position: center;
+    text-align: center;
+
+  animation: cssAnimation 0s 6s forwards;
+  visibility: hidden;
+}
+#showMe2 {
+  color: white;
+    width: 100%;
+  text-align: center;
+
+  position: center;
+  animation: cssAnimation 0s 8s forwards;
+  visibility: hidden;
+}
+
+#nameInput{
+  width: 100%;
+  color: black;
+}
+
+.hi{
+  height: 100em;
+}
+
+@keyframes cssAnimation {
+  to   { visibility: visible; }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% {}
+}
+
+@media (max-width: 700px) {
  
 
+    img {
+        width: 400px;
+    }
+
+}
