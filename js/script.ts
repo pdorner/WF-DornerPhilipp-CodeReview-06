@@ -415,7 +415,7 @@ function createHTML(){
 }
 
 
-//Create Buttons for home
+//Create Buttons for home and Space
 function threeButtons(){
 	$(".cont").append(`   <div class="btn-group btn-group-toggle" data-toggle="buttons" id=universe>
                 <label class="btn btn-secondary active">
