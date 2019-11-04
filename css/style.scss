@@ -126,6 +126,8 @@ p {
     blink-caret 8s step-end infinite;
 }
 
+
+//Delay for intro
 #showMe {
   color: white;
   text-align: center;
@@ -150,14 +152,14 @@ p {
   animation: cssAnimation 0s 8s forwards;
   visibility: hidden;
 }
-
+//imput user field
 #nameInput{
-  width: 100%;
+  width: 90%;
   color: black;
 }
 
 .hi{
-  height: 100em;
+  height: 60em;
 }
 
 @keyframes cssAnimation {

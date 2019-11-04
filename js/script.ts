@@ -355,16 +355,25 @@ let universe1Arr = [planetArr3, planetArr4, planetArr5];
 const universe2 = new Universe("The Expanse");
 
 //Planet Earth
-
+let planet2_0 = new Planet(universe2.universeName, "Earth", "Homeplanet",
+	"Earth", "Sol-system", "./img/earther_logo.png" ,"https://memory-beta.fandom.com/wiki/Delta_Volanis_Cluster");
 //Planet Mars
-
+let planet2_1 = new Planet(universe2.universeName, "Mars", "Mars Colonie",
+	"Marth", "Sol-system", "./img/expans_logo3.jpg" ,"https://memory-beta.fandom.com/wiki/Delta_Volanis_Cluster");
 //Belter
+let planet2_2 = new Planet(universe2.universeName, "Belter", "Space",
+	"Belter", "Sol-system", "./img/belter_logo.png" ,"https://memory-beta.fandom.com/wiki/Delta_Volanis_Cluster");
 
 
+let planetArr6 = [planet2_0, location2_0, restaurant2_0, event2_0_0, event2_0_1];
+let planetArr7 = [planet2_1, location2_1, restaurant2_1_0, restaurant2_1_1, event2_1_0, event2_1_1];
+let planetArr8 = [planet2_2, location2_2, restaurant2_2_0, event2_2];
+
+let universe2Arr = [planetArr6, planetArr7, planetArr8];
 
 //Planet
 let universeNames=[universe0, universe1, universe2];
-let allPlanetArr =[universe0Arr, universe1Arr];
+let allPlanetArr =[universe0Arr, universe1Arr, universe2Arr];
 
 
 
@@ -410,8 +419,7 @@ function createHTML(){
   		<div class="text-center py-3" >
    		<p style: "color: blue">© 2019 Copyright: Philipp<p>
   		</div>
-
-</footer>`);
+		</footer>`);
 	yx();
 
 }
@@ -588,6 +596,281 @@ $(".collapse").on('click', '#home', function () {
 	creatPlanets(universe0Arr);
 	creatLocations(universe0Arr);
 	    });
+
+
+//should be created by loop in futur!!
+$(".collapse").on('click', '#newLocation', function () {
+	$(".cont1").html("");
+	$(".cont0").html("");
+	$(".cont").html("");
+	getDropDown(universeNames);
+	$(".cont").append(`<div class="row">
+            <div class="col-4">
+                <h4>Planet/Location</h4>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+                    </div>
+                    <input type="text" class="form-control" id= "plan1" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm ">Discription</span>
+                    </div>
+                    <input type="text" class="form-control"  id= "plan2"  aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Location/Planet Name</span>
+                    </div>
+                    <input type="text" class="form-control" id= "plan3"  aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Cluster</span>
+                    </div>
+                    <input type="text" class="form-control"  id= "plan4" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Image Source</span>
+                    </div>
+                    <input type="text" class="form-control" id= "plan5" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="<inputGroup-sizing-sm></inputGroup-sizing-sm>">Homepage</span>
+                    </div>
+                    <input type="text" class="form-control" id= "plan6" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <button type="button" id ="newPlanet">New Planet</button>
+                <button type="button" id ="newLocation">New Location</button>
+
+            </div>
+          <div class="col-4">
+            <h4>Restaurant</h4>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan7" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Discription</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan8" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Restaurant Name</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan9" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Cluster</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan10" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Image Source</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan11" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Homepage</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan12" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Telephon</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan13" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                                <button type="button" id ="newRestaurant">New Restaurant</button>
+
+
+            </div>
+            <div class="col-4">
+                <h4>Event</h4>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan14" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Discription</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan15" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Event</span>
+                    <input type="text" class="form-control" id ="plan16" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Cluster</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan17" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Image Source</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan18" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Homepage</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan19" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Telephon</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan20" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Date</span>
+                    </div>
+                    <input type="text" class="form-control" id ="plan21" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">Price</span>
+                    </div>
+                    <input type="number" class="form-control"id ="plan22" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                </div>
+                 <button type="button" id ="newEvent">New Event</button>
+
+            </div>
+        </div>`);
+ });
+creatNew();
+}
+
+function getDropDown(arr){
+	$(".cont").append(`<select class="mdb-select md-form dropd" searchable="Search here..">
+  <option value="" disabled selected>Choose your country</option>
+
+</select> 
+`)
+	for(let i  =0;i<arr.length;i++){
+			
+    $(".dropd").append(`<option value="${i}">${arr[i].universeName}</option>`);
+
+	
+	}
+}
+//add new Planet, Location - Event and Restaurant need to be done
+function creatNew(){
+$(".cont").on('click', '#newPlanet', function () {
+		for(let i  =0;i<allPlanetArr.length;i++){
+			
+				var selectedText = $(".dropd").find("option:selected").text();
+				if (selectedText == allPlanetArr[i][0][0].universeName){
+					let plan1 = "" +$("#plan1").val();
+					console.log(plan1);
+					let plan2 = "" +$("#plan2").val();
+					let plan3 = ""+$("#plan3").val();
+					let plan4 = ""+$("#plan4").val();
+					let plan5 = ""+ $("#plan5").val();
+					let plan6 = ""+ $("#plan6").val();
+					let planetArr42 = new Array()
+					let plan = new Planet(selectedText, plan1, plan2, plan3, plan4, plan5, plan6);
+					planetArr42.push(plan);
+
+					allPlanetArr[i].push(planetArr42);
+				}
+			
+    	}
+	});
+$(".cont").on('click', '#newLocation', function () {
+	for(let i  =0;i<allPlanetArr.length;i++){
+			
+				var selectedText = $(".dropd").find("option:selected").text();
+				if (selectedText == allPlanetArr[i][0][0].universeName){
+					for (let j = 0; j<allPlanetArr[i].length; j++){					
+						let plan1 = $("#plan1").val();
+						if (plan1 == allPlanetArr[i][j][0].name){
+						let plan2 = "" +$("#plan2").val();
+						let plan3 = ""+ $("#plan3").val();
+						let plan4 = ""+ $("#plan4").val();
+						let plan5 = ""+ $("#plan5").val();
+						let plan6 = ""+ $("#plan6").val();
+						let loca = new Locations(selectedText, allPlanetArr[i][j][0].name, plan2, plan3, plan4, plan5, plan6);
+						console.log(loca);
+
+						allPlanetArr[i][j].push(loca);					console.log(allPlanetArr[i][0]);
+						}
+					}
+				}
+    		}
+	    });
+$(".cont").on('click', '#newRestaurant', function () {
+		for(let i  =0;i<allPlanetArr.length;i++){
+			
+				var selectedText = $(".dropd").find("option:selected").text();
+				if (selectedText == allPlanetArr[i][0][0].universeName){
+					for (let j = 0; j<allPlanetArr[i].length; j++){					
+						let plan1 = $("#plan7").val();
+						if (plan1 == allPlanetArr[i][j][0].name){
+
+						let plan1 = "" +$("#plan7").val();
+						console.log(plan1);
+
+						let plan2 = "" +$("#plan8").val();
+						let plan3 = ""+ $("#plan9").val();
+						let plan4 = ""+ $("#plan10").val();
+						let plan5 = ""+ $("#plan11").val();
+						let plan6 = ""+ $("#plan12").val();
+						let plan7 = ""+ $("#plan13").val();
+						let loca = new Restaurant(selectedText, allPlanetArr[i][j][0].name, plan2, plan3, plan4, plan5, plan6, plan7);
+
+						allPlanetArr[i][j].push(loca);					
+						}
+					}
+				}
+    		}
+	    });
+$(".cont").on('click', '#newEvent', function () {
+	for(let i  =0;i<allPlanetArr.length;i++){
+			
+				var selectedText = $(".dropd").find("option:selected").text();
+				if (selectedText == allPlanetArr[i][0][0].universeName){
+					for (let j = 0; j<allPlanetArr[i].length; j++){					
+						let plan1 = $("#plan14").val();
+						if (plan1 == allPlanetArr[i][j][0].name){
+
+						
+						let plan2 = "" +$("#plan15").val();
+						let plan3 = ""+ $("#plan16").val();
+						let plan4 = ""+ $("#plan17").val();
+						let plan5 = ""+ $("#plan18").val();
+						let plan6 = ""+ $("#plan19").val();
+						let plan7 = ""+ $("#plan20").val();
+						let plan8 = ""+ $("#plan21").val();
+
+						let plan9 = Number($("#plan22").val());
+
+						let loca = new Events(selectedText, allPlanetArr[i][j][0].name, plan2, plan3, plan4, plan5, plan6, plan7, plan8, plan9);
+
+						allPlanetArr[i][j].push(loca);					
+						}
+					}
+				}
+    		}
+	
+	    });
 }
 //------------------------------------------Some Function for my HTML ------------------------------------------------
 
@@ -608,6 +891,13 @@ $("input[id='option2']").change(function(){
 	creatCarosel2();
 	creatPlanets(universe1Arr);
 	creatLocations(universe1Arr);
+});
+$("input[id='option3']").change(function(){
+	$(".cont1").html("");
+	$(".cont0").html("");
+	creatCarosel2();
+	creatPlanets(universe2Arr);
+	creatLocations(universe2Arr);
 });
 }
 // Check into my Travelblock Questions

@@ -108,11 +108,11 @@ p {
   visibility: hidden; }
 
 #nameInput {
-  width: 100%;
+  width: 90%;
   color: black; }
 
 .hi {
-  height: 100em; }
+  height: 60em; }
 
 @keyframes cssAnimation {
   to {

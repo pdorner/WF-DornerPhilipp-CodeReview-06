@@ -231,16 +231,23 @@ var universe1Arr = [planetArr3, planetArr4, planetArr5];
 //The Expanse ----------under construction
 var universe2 = new Universe("The Expanse");
 //Planet Earth
+var planet2_0 = new Planet(universe2.universeName, "Earth", "Homeplanet", "Earth", "Sol-system", "./img/earther_logo.png", "https://memory-beta.fandom.com/wiki/Delta_Volanis_Cluster");
 //Planet Mars
+var planet2_1 = new Planet(universe2.universeName, "Mars", "Mars Colonie", "Marth", "Sol-system", "./img/expans_logo3.jpg", "https://memory-beta.fandom.com/wiki/Delta_Volanis_Cluster");
 //Belter
+var planet2_2 = new Planet(universe2.universeName, "Belter", "Space", "Belter", "Sol-system", "./img/belter_logo.png", "https://memory-beta.fandom.com/wiki/Delta_Volanis_Cluster");
+var planetArr6 = [planet2_0, location2_0, restaurant2_0, event2_0_0, event2_0_1];
+var planetArr7 = [planet2_1, location2_1, restaurant2_1_0, restaurant2_1_1, event2_1_0, event2_1_1];
+var planetArr8 = [planet2_2, location2_2, restaurant2_2_0, event2_2];
+var universe2Arr = [planetArr6, planetArr7, planetArr8];
 //Planet
 var universeNames = [universe0, universe1, universe2];
-var allPlanetArr = [universe0Arr, universe1Arr];
+var allPlanetArr = [universe0Arr, universe1Arr, universe2Arr];
 //------------------------------------------Start with createing my HTML----------------------------------------------
 $(document).ready(function () {
     //Create groundstructor of my HTML
     function createHTML() {
-        $(".container").append(" <header>\n            <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\n                <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                    <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n                    <div class=\"navbar-nav\">\n                        <a class=\"nav-item nav-link\" id = \"home\" href=\"#\">Home</a>\n                        <a class=\"nav-item nav-link\" id =\"all\" href=\"#\">Space</a>\n                        <a class=\"nav-item nav-link\" id =\"newLocation\" href=\"#\">Add Locations</a>\n\n                    </div>\n                </div>\n            </nav>\n           \n            <br>\n            <h1 id=title> Space<br>Travel </h1>\n            <h3 style=\"color:lightgreen\">" + user.user + " online</h3>\n            <hr>\n            <content class=\"cont\">\n            </content>\n        </header><!-- /header -->\n        <main>\n            <content class=\"cont0\">\n            </content>\n             <div class=\"typewriter\">\n            <content class=\"cont1\">\n            </content></div>\n        </main>\n        <footer class=\"page-footer font-small blue\">\n\n  \t\t<div class=\"text-center py-3\" >\n   \t\t<p style: \"color: blue\">\u00A9 2019 Copyright: Philipp<p>\n  \t\t</div>\n\n</footer>");
+        $(".container").append(" <header>\n            <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\n                <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n                    <span class=\"navbar-toggler-icon\"></span>\n                </button>\n                <div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">\n                    <div class=\"navbar-nav\">\n                        <a class=\"nav-item nav-link\" id = \"home\" href=\"#\">Home</a>\n                        <a class=\"nav-item nav-link\" id =\"all\" href=\"#\">Space</a>\n                        <a class=\"nav-item nav-link\" id =\"newLocation\" href=\"#\">Add Locations</a>\n\n                    </div>\n                </div>\n            </nav>\n           \n            <br>\n            <h1 id=title> Space<br>Travel </h1>\n            <h3 style=\"color:lightgreen\">" + user.user + " online</h3>\n            <hr>\n            <content class=\"cont\">\n            </content>\n        </header><!-- /header -->\n        <main>\n            <content class=\"cont0\">\n            </content>\n             <div class=\"typewriter\">\n            <content class=\"cont1\">\n            </content></div>\n        </main>\n        <footer class=\"page-footer font-small blue\">\n\n  \t\t<div class=\"text-center py-3\" >\n   \t\t<p style: \"color: blue\">\u00A9 2019 Copyright: Philipp<p>\n  \t\t</div>\n\t\t</footer>");
         yx();
     }
     //------------------------------------------HTML Elemtents that Change with going through the Page----------------------------------------------
@@ -314,6 +321,107 @@ $(document).ready(function () {
             creatPlanets(universe0Arr);
             creatLocations(universe0Arr);
         });
+        //should be created by loop in futur!!
+        $(".collapse").on('click', '#newLocation', function () {
+            $(".cont1").html("");
+            $(".cont0").html("");
+            $(".cont").html("");
+            getDropDown(universeNames);
+            $(".cont").append("<div class=\"row\">\n            <div class=\"col-4\">\n                <h4>Planet/Location</h4>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Name</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id= \"plan1\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm \">Discription</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\"  id= \"plan2\"  aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Location/Planet Name</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id= \"plan3\"  aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Cluster</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\"  id= \"plan4\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Image Source</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id= \"plan5\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"<inputGroup-sizing-sm></inputGroup-sizing-sm>\">Homepage</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id= \"plan6\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <button type=\"button\" id =\"newPlanet\">New Planet</button>\n                <button type=\"button\" id =\"newLocation\">New Location</button>\n\n            </div>\n          <div class=\"col-4\">\n            <h4>Restaurant</h4>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Name</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan7\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Discription</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan8\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Restaurant Name</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan9\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Cluster</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan10\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Image Source</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan11\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Homepage</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan12\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Telephon</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan13\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                                <button type=\"button\" id =\"newRestaurant\">New Restaurant</button>\n\n\n            </div>\n            <div class=\"col-4\">\n                <h4>Event</h4>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Name</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan14\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Discription</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan15\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Event</span>\n                    <input type=\"text\" class=\"form-control\" id =\"plan16\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Cluster</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan17\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Image Source</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan18\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Homepage</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan19\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Telephon</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan20\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Date</span>\n                    </div>\n                    <input type=\"text\" class=\"form-control\" id =\"plan21\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                <div class=\"input-group input-group-sm mb-3\">\n                    <div class=\"input-group-prepend\">\n                        <span class=\"input-group-text\" id=\"inputGroup-sizing-sm\">Price</span>\n                    </div>\n                    <input type=\"number\" class=\"form-control\"id =\"plan22\" aria-label=\"Small\" aria-describedby=\"inputGroup-sizing-sm\">\n                </div>\n                 <button type=\"button\" id =\"newEvent\">New Event</button>\n\n            </div>\n        </div>");
+        });
+        creatNew();
+    }
+    function getDropDown(arr) {
+        $(".cont").append("<select class=\"mdb-select md-form dropd\" searchable=\"Search here..\">\n  <option value=\"\" disabled selected>Choose your country</option>\n\n</select> \n");
+        for (var i = 0; i < arr.length; i++) {
+            $(".dropd").append("<option value=\"" + i + "\">" + arr[i].universeName + "</option>");
+        }
+    }
+    //add new Planet, Location - Event and Restaurant need to be done
+    function creatNew() {
+        $(".cont").on('click', '#newPlanet', function () {
+            for (var i = 0; i < allPlanetArr.length; i++) {
+                var selectedText = $(".dropd").find("option:selected").text();
+                if (selectedText == allPlanetArr[i][0][0].universeName) {
+                    var plan1 = "" + $("#plan1").val();
+                    console.log(plan1);
+                    var plan2 = "" + $("#plan2").val();
+                    var plan3 = "" + $("#plan3").val();
+                    var plan4 = "" + $("#plan4").val();
+                    var plan5 = "" + $("#plan5").val();
+                    var plan6 = "" + $("#plan6").val();
+                    var planetArr42 = new Array();
+                    var plan = new Planet(selectedText, plan1, plan2, plan3, plan4, plan5, plan6);
+                    planetArr42.push(plan);
+                    allPlanetArr[i].push(planetArr42);
+                }
+            }
+        });
+        $(".cont").on('click', '#newLocation', function () {
+            for (var i = 0; i < allPlanetArr.length; i++) {
+                var selectedText = $(".dropd").find("option:selected").text();
+                if (selectedText == allPlanetArr[i][0][0].universeName) {
+                    for (var j = 0; j < allPlanetArr[i].length; j++) {
+                        var plan1 = $("#plan1").val();
+                        if (plan1 == allPlanetArr[i][j][0].name) {
+                            var plan2 = "" + $("#plan2").val();
+                            var plan3 = "" + $("#plan3").val();
+                            var plan4 = "" + $("#plan4").val();
+                            var plan5 = "" + $("#plan5").val();
+                            var plan6 = "" + $("#plan6").val();
+                            var loca = new Locations(selectedText, allPlanetArr[i][j][0].name, plan2, plan3, plan4, plan5, plan6);
+                            console.log(loca);
+                            allPlanetArr[i][j].push(loca);
+                            console.log(allPlanetArr[i][0]);
+                        }
+                    }
+                }
+            }
+        });
+        $(".cont").on('click', '#newRestaurant', function () {
+            for (var i = 0; i < allPlanetArr.length; i++) {
+                var selectedText = $(".dropd").find("option:selected").text();
+                if (selectedText == allPlanetArr[i][0][0].universeName) {
+                    for (var j = 0; j < allPlanetArr[i].length; j++) {
+                        var plan1 = $("#plan7").val();
+                        if (plan1 == allPlanetArr[i][j][0].name) {
+                            var plan1_1 = "" + $("#plan7").val();
+                            console.log(plan1_1);
+                            var plan2 = "" + $("#plan8").val();
+                            var plan3 = "" + $("#plan9").val();
+                            var plan4 = "" + $("#plan10").val();
+                            var plan5 = "" + $("#plan11").val();
+                            var plan6 = "" + $("#plan12").val();
+                            var plan7 = "" + $("#plan13").val();
+                            var loca = new Restaurant(selectedText, allPlanetArr[i][j][0].name, plan2, plan3, plan4, plan5, plan6, plan7);
+                            allPlanetArr[i][j].push(loca);
+                        }
+                    }
+                }
+            }
+        });
+        $(".cont").on('click', '#newEvent', function () {
+            for (var i = 0; i < allPlanetArr.length; i++) {
+                var selectedText = $(".dropd").find("option:selected").text();
+                if (selectedText == allPlanetArr[i][0][0].universeName) {
+                    for (var j = 0; j < allPlanetArr[i].length; j++) {
+                        var plan1 = $("#plan14").val();
+                        if (plan1 == allPlanetArr[i][j][0].name) {
+                            var plan2 = "" + $("#plan15").val();
+                            var plan3 = "" + $("#plan16").val();
+                            var plan4 = "" + $("#plan17").val();
+                            var plan5 = "" + $("#plan18").val();
+                            var plan6 = "" + $("#plan19").val();
+                            var plan7 = "" + $("#plan20").val();
+                            var plan8 = "" + $("#plan21").val();
+                            var plan9 = Number($("#plan22").val());
+                            var loca = new Events(selectedText, allPlanetArr[i][j][0].name, plan2, plan3, plan4, plan5, plan6, plan7, plan8, plan9);
+                            allPlanetArr[i][j].push(loca);
+                        }
+                    }
+                }
+            }
+        });
     }
     //------------------------------------------Some Function for my HTML ------------------------------------------------
     //change the universe first Hitchhiker’s Second Star Trek
@@ -331,6 +439,13 @@ $(document).ready(function () {
             creatCarosel2();
             creatPlanets(universe1Arr);
             creatLocations(universe1Arr);
+        });
+        $("input[id='option3']").change(function () {
+            $(".cont1").html("");
+            $(".cont0").html("");
+            creatCarosel2();
+            creatPlanets(universe2Arr);
+            creatLocations(universe2Arr);
         });
     }
     // Check into my Travelblock Questions
