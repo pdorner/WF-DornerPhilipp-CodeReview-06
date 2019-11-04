@@ -475,10 +475,11 @@ function creatCarosel1(){
                             <p>“Golgafrincham was a planet, once home to the Great Circling Poets of Arium”</p>
                         </div>
                     </div>
-                </div>
+              </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <!--made a button insted of a-->
                     <span class="carousel-control-prev-icon d-none d-md-block" aria-hidden="true"></span>
-                    <span class="sr-only >Previous</span>
+                    <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                     <span class="carousel-control-next-icon d-none d-md-block" aria-hidden="true"></span>
@@ -733,7 +734,7 @@ $(".collapse").on('click', '#newLocation', function () {
 
 
             </div>
-            <div class="col-sm-12 col-md-6 d-none d-md-block">
+          	<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
                 <h4>Event</h4>
                 <div class="input-group input-group-sm mb-3">
                     <div class="input-group-prepend">
