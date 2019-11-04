@@ -1,6 +1,5 @@
 .container {
   background: url(../img/background2.gif);
-  width: 90% !important;
   font-family: Molengo, Sans-serif; }
 
 #universe {
@@ -112,7 +111,7 @@ p {
   color: black; }
 
 .hi {
-  height: 60em; }
+  height: 90em; }
 
 @keyframes cssAnimation {
   to {

@@ -359,7 +359,7 @@ let planet2_0 = new Planet(universe2.universeName, "Earth", "Homeplanet",
 	"Earth", "Sol-system", "./img/earther_logo.png" ,"https://memory-beta.fandom.com/wiki/Delta_Volanis_Cluster");
 //Planet Mars
 let planet2_1 = new Planet(universe2.universeName, "Mars", "Mars Colonie",
-	"Marth", "Sol-system", "./img/expans_logo3.jpg" ,"https://memory-beta.fandom.com/wiki/Delta_Volanis_Cluster");
+	"Mars", "Sol-system", "./img/expans_logo3.jpg" ,"https://memory-beta.fandom.com/wiki/Delta_Volanis_Cluster");
 //Belter
 let planet2_2 = new Planet(universe2.universeName, "Belter", "Space",
 	"Belter", "Sol-system", "./img/belter_logo.png" ,"https://memory-beta.fandom.com/wiki/Delta_Volanis_Cluster");
@@ -446,7 +446,7 @@ function threeButtons(){
 //Create Carosel for Hitchhiker’s
 function creatCarosel1(){
             $(".cont0").append(`<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
+  <div class="carousel-inner d-none d-md-block">
     <div class="carousel-item active">
                         <img class="d-block w-100" src="./img/universe_logo.jpg" alt="First slide">
                         <div class="carousel-caption d-none d-md-block">
@@ -477,11 +477,11 @@ function creatCarosel1(){
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
+                    <span class="carousel-control-prev-icon d-none d-md-block" aria-hidden="true"></span>
+                    <span class="sr-only >Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-next-icon d-none d-md-block" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>`);   
@@ -489,7 +489,7 @@ function creatCarosel1(){
 //Create Carosel for Star Trek
 function creatCarosel2(){
             $(".cont0").append(`<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
+  <div class="carousel-inner d-none d-md-block">
     <div class="carousel-item active">
                         <img class="d-block w-100" src="./img/starTrek_logo1.png" alt="First slide">
 
@@ -522,11 +522,49 @@ function creatCarosel2(){
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <!--made a button insted of a-->
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-prev-icon d-none d-md-block" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-next-icon d-none d-md-block" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>`);   
+}
+function creatCarosel3(){
+            $(".cont0").append(`<div id="carouselExampleControls" class="carousel slide d-none d-md-block" data-ride="carousel">
+  <div class="carousel-inner d-none d-md-block">
+    <div class="carousel-item active">
+                        <img class="d-block w-100" src="./img/expans_logo1.jpg" alt="First slide">
+
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>The Expansek</h3>
+                            <p>“Earth, Mars, Belter”</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./img/expans_logo2.jfif" alt="Third slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>The Expansek</h3>
+                            <p>“Earth, Mars, Belter”</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 " src="./img/expans_logo3.jpg" alt="Second slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>The Expansek</h3>
+                            <p>“Earth, Mars, Belter”</p>
+                        </div>
+                    </div>
+                  
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <!--made a button insted of a-->
+                    <span class="carousel-control-prev-icon d-none d-md-block" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon d-none d-md-block" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
             </div>`);   
@@ -605,7 +643,7 @@ $(".collapse").on('click', '#newLocation', function () {
 	$(".cont").html("");
 	getDropDown(universeNames);
 	$(".cont").append(`<div class="row">
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
                 <h4>Planet/Location</h4>
                 <div class="input-group input-group-sm mb-3">
                     <div class="input-group-prepend">
@@ -647,7 +685,7 @@ $(".collapse").on('click', '#newLocation', function () {
                 <button type="button" id ="newLocation">New Location</button>
 
             </div>
-          <div class="col-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
             <h4>Restaurant</h4>
                 <div class="input-group input-group-sm mb-3">
                     <div class="input-group-prepend">
@@ -695,7 +733,7 @@ $(".collapse").on('click', '#newLocation', function () {
 
 
             </div>
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 d-none d-md-block">
                 <h4>Event</h4>
                 <div class="input-group input-group-sm mb-3">
                     <div class="input-group-prepend">
@@ -712,7 +750,8 @@ $(".collapse").on('click', '#newLocation', function () {
                 <div class="input-group input-group-sm mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroup-sizing-sm">Event</span>
-                    <input type="text" class="form-control" id ="plan16" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                   </div>
+                   <input type="text" class="form-control" id ="plan16" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                 </div>
                 <div class="input-group input-group-sm mb-3">
                     <div class="input-group-prepend">
@@ -895,7 +934,7 @@ $("input[id='option2']").change(function(){
 $("input[id='option3']").change(function(){
 	$(".cont1").html("");
 	$(".cont0").html("");
-	creatCarosel2();
+	creatCarosel3();
 	creatPlanets(universe2Arr);
 	creatLocations(universe2Arr);
 });
